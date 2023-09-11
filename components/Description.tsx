@@ -48,7 +48,6 @@ function Description() {
       quantity: quantity + currentQty
     })
   }
-
   return (
     <AnimatePresence>
       <motion.div

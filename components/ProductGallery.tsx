@@ -44,12 +44,6 @@ function ProductGallery() {
     }
   }
 
-  {
-    product.map((prod) => (
-      console.log(prod)
-    ))
-  }
-
   function handleOpenFull() {
     const index = product.indexOf(currentImage)
     setFullView(product[index])

@@ -27,7 +27,7 @@ function Navbar() {
   }
   return (
     <nav className='flex items-center w-full lg:w-[80rem] border justify-between border-b-gray-300 border-transparent relative'>
-      <div className='flex items-center w-full justify-start gap-0 pl-5 md:pl-0 h-24'>
+      <div className='flex items-center w-full justify-start gap-0 pl-5 md:pl-0 h-16 md:h-24'>
         <button onClick={() => setOpenNav(!openNav)} className='flex items-center relative top-0 border-black'><FontAwesomeIcon icon={faBars} className='text-xl md:hidden' /> </button>
         <h1 className='font-bold text-[30px] ml-3 md:mr-10 relative top-[-2px] cursor-default'>sneakers</h1>
         <ul className='hidden md:flex items-center gap-5 h-full'>
@@ -92,7 +92,7 @@ function Navbar() {
             }
           </AnimatePresence>
         </div>
-        <button className='transition duration-300 border-2 hover:border-orange-500 rounded-full'><img src='/assets/images/image-avatar.png' className='w-16 h-8 md:w-14 md:h-11' /></button>
+        <button className='transition duration-300 border-2 hover:border-orange-500 rounded-full w-10 h-10 md:w-12 md:h-12'><img src='/assets/images/image-avatar.png' className='w-full' /></button>
       </div>
 
       <AnimatePresence>
