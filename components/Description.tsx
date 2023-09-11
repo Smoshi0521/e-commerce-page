@@ -48,6 +48,7 @@ function Description() {
       quantity: quantity + currentQty
     })
   }
+  console.log(quantity === 0)
   return (
     <AnimatePresence>
       <motion.div
@@ -72,7 +73,7 @@ function Description() {
             <p className=''>{quantity}</p>
             <button onClick={() => handleAddMinus("add")} className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-plus.png' className='w-[10px]' /></button>
           </div>
-          <button onClick={() => addCart('fall')} disabled={quantity === 0} className={`${quantity === 0 ? "bg-orange-300" : "bg-orange-500"} w-full md:w-[240px] py-3 text-white rounded-lg font-medium text-sm flex items-center justify-center gap-3 shadow-xl transition duration-200 bg-orange-500 hover:bg-orange-300`}>
+          <button onClick={() => addCart('fall')} disabled={quantity === 0} className={`${quantity === 0 ? "bg-orange-300" : "bg-orange-500"} w-full md:w-[240px] py-3 text-white rounded-lg font-medium text-sm flex items-center justify-center gap-3 shadow-xl transition duration-200 hover:bg-orange-300`}>
             <FontAwesomeIcon icon={faShoppingCart} className='text-md' />
             Add to cart
           </button>

@@ -103,7 +103,7 @@ function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
               transition={{ delay: 0.25 }}
-              className={`bg-white absolute right-2 md:right-0 top-[105px] md:top-20 flex flex-col w-[95%] md:w-[340px] drop-shadow-2xl rounded-lg z-20`}>
+              className={`bg-white absolute right-2 md:right-0 top-[70px] md:top-20 flex flex-col w-[95%] md:w-[340px] drop-shadow-2xl rounded-lg z-20`}>
               <p className='h-16 flex items-center border border-b-gray-300 border-transparent px-5 rounded-t-xl font-bold'>Cart</p>
               <div className='flex flex-col p-5 gap-5'>
                 {

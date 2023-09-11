@@ -17,32 +17,6 @@ function ProductGallery() {
   const [fullView, setFullView] = useState(currentImage)
   const [openFullView, setOpenFullView] = useState(false)
 
-  function handleNextImage(direction: string) { //Function to move to next and back image
-    let currentIndex = index
-    if (currentIndex >= product.length - 1 && direction === "next") {
-      currentIndex = 0
-      console.log("here")
-      setIndex(currentIndex)
-      setCurrentImage(product[currentIndex])
-    }
-    else if (currentIndex === 0 && direction === "back") {
-      currentIndex = product.length - 1
-
-      setIndex(currentIndex)
-      setCurrentImage(product[currentIndex])
-    }
-    else if (direction === "next") {
-      currentIndex++
-      setIndex(currentIndex)
-      setCurrentImage(product[currentIndex])
-    }
-    else if (direction === "back") {
-      currentIndex--
-      console.log("here")
-      setIndex(currentIndex)
-      setCurrentImage(product[currentIndex])
-    }
-  }
 
   function handleOpenFull() {
     const index = product.indexOf(currentImage)
@@ -52,10 +26,11 @@ function ProductGallery() {
 
   function handleMoveImage(move: string) {
     let ind = product.indexOf(fullView)
-    if (index === product.length - 1 && move === "next") {
-      setFullView(product[ind])
+    if (ind >= product.length-1 && move === "next") {
+      setFullView(product[product.length - 1])
+      console.log(fullView,"here")
     }
-    else if (index === 0 && move === "back") {
+    else if (ind === 0 && move === "back") {
       setFullView(product[ind])
     }
     else if (move === "next") {
