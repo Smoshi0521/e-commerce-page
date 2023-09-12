@@ -47,8 +47,8 @@ function Description() {
       cost: sneaker.cost * sneaker.discount,
       quantity: quantity + currentQty
     })
+    setQuantity(0)
   }
-  console.log(quantity === 0)
   return (
     <AnimatePresence>
       <motion.div
@@ -57,21 +57,21 @@ function Description() {
         exit={{ opacity: 0, y: 15 }}
         transition={{ delay: 0.25 }}
         className='flex flex-col w-full gap-5 p-5'>
-        <h2 className={`text-sm font-semibold tracking-widest`} style={{ color: orange }}>SNEAKER COMPANY</h2>
+        <h2 className={`text-sm font-semibold tracking-widest text-orange-500`}>SNEAKER COMPANY</h2>
         <h1 className='font-semibold text-[30px] md:text-[40px]'>{sneaker.name}</h1>
         <p className='text-left text-gray-500'>{sneaker.description}</p>
         <div className='flex items-center justify-between md:flex-col md:items-start w-full'>
           <div className='flex items-center gap-3'>
             <p className='font-bold text-2xl'>{`$${sneaker.cost * sneaker.discount}.00`}</p>
-            <p className="px-2 rounded-md" style={{ color: orange, backgroundColor: paleOrange }}>{`${sneaker.discountString}`}</p>
+            <p className="px-2 rounded-md bg-orange-300 text-orange-500">{`${sneaker.discountString}`}</p>
           </div>
           <p className='text-gray-400 line-through'>{`$${sneaker.cost}.00`}</p>
         </div>
         <div className='flex flex-col md:flex-row items-center gap-2'>
           <div id='quantity' className='bg-slate-100 w-full md:w-[150px] py-3 px-3 rounded-md flex items-center justify-between'>
-            <button onClick={() => handleAddMinus("minus")} aria-label="Minus" className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-minus.png' className='w-[10px]' /></button>
+            <button onClick={() => handleAddMinus("minus")} aria-label="Minus" className='text-[25px] p-2' style={{ color: orange }}><img alt='minus' height={0} width={0} src='/assets/images/icon-minus.png' className='w-[10px]' /></button>
             <p className=''>{quantity}</p>
-            <button onClick={() => handleAddMinus("add")} aria-label="Plus" className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-plus.png' className='w-[10px]' /></button>
+            <button onClick={() => handleAddMinus("add")} aria-label="Plus" className='text-[25px] p-2' style={{ color: orange }}><img alt='plus' height={0} width={0} src='/assets/images/icon-plus.png' className='w-[10px]' /></button>
           </div>
           <button onClick={() => addCart('fall')} aria-label="Add to cart" disabled={quantity === 0} className={`${quantity === 0 ? "bg-orange-300" : "bg-orange-500"} w-full md:w-[240px] py-3 text-white rounded-lg font-medium text-sm flex items-center justify-center gap-3 shadow-xl transition duration-200 hover:bg-orange-300`}>
             <FontAwesomeIcon icon={faShoppingCart} className='text-md' />

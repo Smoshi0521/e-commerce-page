@@ -28,7 +28,7 @@ function Navbar() {
   return (
     <nav className='flex items-center w-full lg:w-[80rem] border justify-between border-b-gray-300 border-transparent relative'>
       <div className='flex items-center w-full justify-start gap-0 pl-5 md:pl-0 h-16 md:h-24'>
-        <button onClick={() => setOpenNav(!openNav)} aria-labelledby="Navigation" className='flex items-center relative top-0 border-black'><FontAwesomeIcon icon={faBars} className='text-xl md:hidden' /> </button>
+        <button onClick={() => setOpenNav(!openNav)} aria-labelledby="navigation" className='flex items-center relative top-0 border-black'><FontAwesomeIcon icon={faBars} className='text-xl md:hidden' /> </button>
         <h1 className='font-bold text-[30px] ml-3 md:mr-10 relative top-[-2px] cursor-default'>sneakers</h1>
         <ul className='hidden md:flex items-center gap-5 h-full'>
           <li className='transition duration-200 border-[3px] hover:border-b-orange-500 border-transparent h-full flex items-center'>
@@ -48,7 +48,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div id={"Navigation"} className={openNav ? "fixed top-0 w-full h-screen backdrop-blur-xl z-10" : "z-10"}>
+      <div id="navigation" className={openNav ? "fixed top-0 w-full h-screen backdrop-blur-xl z-10" : "z-10"}>
         <div className={`duration-300 ease-in w-[60%] sm:w-[50%] md:[45%] ${openNav ? "fixed top-0 left-0 bg-white h-screen w-[200px] px-5" : "fixed top-0 left-[-100%] bg-white h-screen w-[200px] px-5"}`}>
           <div className='py-5 mb-2'>
             <button onClick={() => setOpenNav(!openNav)}><FontAwesomeIcon icon={faRemove} className='text-lg' /></button>
@@ -76,7 +76,7 @@ function Navbar() {
       <div className='flex items-center gap-5 mr-5 md:mr-0'>
         <div
           className='relative'>
-          <button aria-labelledby="CartList" onClick={() => setOpenCart(!openCart)}><FontAwesomeIcon icon={faShoppingCart} className='text-md md:text-xl' /></button>
+          <button aria-labelledby="cartList" onClick={() => setOpenCart(!openCart)}><FontAwesomeIcon icon={faShoppingCart} className='text-md md:text-xl' /></button>
           <AnimatePresence>
             {
               cartLength !== 0 && (
@@ -103,7 +103,7 @@ function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
               transition={{ delay: 0.25 }}
-              id={"CartList"}
+              id="cartList"
               className={`bg-white absolute right-2 md:right-0 top-[70px] md:top-20 flex flex-col w-[95%] md:w-[340px] drop-shadow-2xl rounded-lg z-20`}>
               <p className='h-16 flex items-center border border-b-gray-300 border-transparent px-5 rounded-t-xl font-bold'>Cart</p>
               <div className='flex flex-col p-5 gap-5'>
@@ -116,7 +116,7 @@ function Navbar() {
 
                     cartList?.docs.map((list) => (
                       <div key={list.id} className='flex items-center'>
-                        <img alt="productImage" src='/assets/images/image-product-1.jpg' className='w-[50px] rounded-lg mr-2' />
+                        <img alt="productImage" src='/assets/images/image-product-1.jpg' width={0} height={0} className='w-[50px] rounded-lg mr-2' />
                         <div className='flex flex-col gap-1 w-full'>
                           <p className='text-gray-500 text-sm'>{list.data().name}</p>
                           <div className='flex items-center gap-2'>

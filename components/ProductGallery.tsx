@@ -87,7 +87,7 @@ function ProductGallery() {
                     <button onClick={() => setOpenFullView(!openFullView)}><FontAwesomeIcon icon={faRemove} className='text-2xl transition duration-200 text-white hover:text-orange-500' /></button>
                   </div>
                   <div className='flex items-center relative mb-5 w-[430px] justify-center'>
-                    <img alt="productImage" src={fullView} className='w-[400px] rounded-xl' />
+                    <img height={0} width={0} alt="productImage" src={fullView} className='w-[400px] rounded-xl' />
                     <div className='absolute flex justify-between w-full items-center'>
                       <button aria-label="previous" onClick={() => handleMoveImage("back")} className="bg-white transition duration-200 rounded-full w-10 h-10 flex items-center justify-center shadow-xl hover:text-orange-500">
                         <FontAwesomeIcon icon={faChevronLeft} className='text-lg' />

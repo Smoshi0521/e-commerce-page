@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import AddCart from '@/components/AddCart'
 import ProductGallery from '@/components/ProductGallery'
 import Description from '@/components/Description'
 import Navbar from '@/components/Navbar'
