@@ -63,7 +63,7 @@ function Description() {
         <div className='flex items-center justify-between md:flex-col md:items-start w-full'>
           <div className='flex items-center gap-3'>
             <p className='font-bold text-2xl'>{`$${sneaker.cost * sneaker.discount}.00`}</p>
-            <p className="px-2 rounded-md bg-orange-300 text-orange-500">{`${sneaker.discountString}`}</p>
+            <p className="px-2 rounded-md bg-orange-100 text-orange-500">{`${sneaker.discountString}`}</p>
           </div>
           <p className='text-gray-400 line-through'>{`$${sneaker.cost}.00`}</p>
         </div>

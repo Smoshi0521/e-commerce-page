@@ -92,7 +92,7 @@ function Navbar() {
             }
           </AnimatePresence>
         </div>
-        <button className='transition duration-300 border-2 hover:border-orange-500 rounded-full w-10 h-10 md:w-12 md:h-12'><img alt="profilePic" src='/assets/images/image-avatar.png' className='w-full' /></button>
+        <button className='transition duration-300 border-2 hover:border-orange-500 rounded-full w-10 h-10 md:w-12 md:h-12'><img alt="profilePic" height={0} width={0} src='/assets/images/image-avatar.png' className='w-full' /></button>
       </div>
 
       <AnimatePresence>
