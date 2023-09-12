@@ -7,33 +7,6 @@ function Carousel({ children: slides }: any) {
   const [index, setIndex] = useState(0)
   const [fullView, setFullView] = useState(false)
   const [current, setCurrent] = useState(0)
-  // function handleNextImage(direction: string) { //Function to move to next and back image
-  //   let currentIndex = index
-  //   if (currentIndex >= product.length - 1 && direction === "next") {
-  //     currentIndex = 0
-  //     console.log("here")
-  //     setIndex(currentIndex)
-  //     setCurrentImage(product[currentIndex])
-  //   }
-  //   else if (currentIndex === 0 && direction === "back") {
-  //     currentIndex = product.length - 1
-
-  //     setIndex(currentIndex)
-  //     setCurrentImage(product[currentIndex])
-  //   }
-  //   else if (direction === "next") {
-  //     currentIndex++
-  //     setIndex(currentIndex)
-  //     setCurrentImage(product[currentIndex])
-  //   }
-  //   else if (direction === "back") {
-  //     currentIndex--
-  //     console.log("here")
-  //     setIndex(currentIndex)
-  //     setCurrentImage(product[currentIndex])
-  //   }
-  // }
-
   function prev() {
     setCurrent(current => current === 0 ? slides.length - 1 : current - 1)
   }
@@ -47,10 +20,10 @@ function Carousel({ children: slides }: any) {
         {slides}
       </div>
       <div className='absolute flex justify-between w-full px-5 '>
-        <button className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-xl" onClick={prev}>
+        <button aria-label="previous" className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-xl" onClick={prev}>
           <Image src={"/assets/images/icon-previous.png"} height={8} width={8} alt='' style={{ width: "auto", height: "auto" }} />
         </button>
-        <button className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-xl" onClick={next}>
+        <button aria-label="next" className="bg-white rounded-full w-8 h-8 flex items-center justify-center shadow-xl" onClick={next}>
           <Image src={"/assets/images/icon-next.png"} height={8} width={8} alt='' style={{ width: "auto", height: "auto" }} />
         </button>
       </div>

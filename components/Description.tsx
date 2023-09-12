@@ -69,11 +69,11 @@ function Description() {
         </div>
         <div className='flex flex-col md:flex-row items-center gap-2'>
           <div id='quantity' className='bg-slate-100 w-full md:w-[150px] py-3 px-3 rounded-md flex items-center justify-between'>
-            <button onClick={() => handleAddMinus("minus")} className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-minus.png' className='w-[10px]' /></button>
+            <button onClick={() => handleAddMinus("minus")} aria-label="Minus" className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-minus.png' className='w-[10px]' /></button>
             <p className=''>{quantity}</p>
-            <button onClick={() => handleAddMinus("add")} className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-plus.png' className='w-[10px]' /></button>
+            <button onClick={() => handleAddMinus("add")} aria-label="Plus" className='text-[25px] p-2' style={{ color: orange }}><img src='/assets/images/icon-plus.png' className='w-[10px]' /></button>
           </div>
-          <button onClick={() => addCart('fall')} disabled={quantity === 0} className={`${quantity === 0 ? "bg-orange-300" : "bg-orange-500"} w-full md:w-[240px] py-3 text-white rounded-lg font-medium text-sm flex items-center justify-center gap-3 shadow-xl transition duration-200 hover:bg-orange-300`}>
+          <button onClick={() => addCart('fall')} aria-label="Add to cart" disabled={quantity === 0} className={`${quantity === 0 ? "bg-orange-300" : "bg-orange-500"} w-full md:w-[240px] py-3 text-white rounded-lg font-medium text-sm flex items-center justify-center gap-3 shadow-xl transition duration-200 hover:bg-orange-300`}>
             <FontAwesomeIcon icon={faShoppingCart} className='text-md' />
             Add to cart
           </button>

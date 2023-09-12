@@ -62,13 +62,13 @@ function ProductGallery() {
             }
           </Carousel>
           <div className='md:flex flex-col items-center hidden gap-5 relative w-fit'>
-            <img onClick={handleOpenFull} src={currentImage} className='w-[400px] cursor-pointer rounded-xl mb-3' />
+            <img alt="productImage" onClick={handleOpenFull} src={currentImage} className='w-[400px] cursor-pointer rounded-xl mb-3' />
             <div className='flex items-center justify-center gap-5 w-[350px]'>
               {
                 product.map((prod) => (
                   <div key={prod} onClick={() => setCurrentImage(prod)}
                     className={` group flex items-center justify-center transition duration-300 hover:bg-gradient-to-r from-[#f5f5f5] to-[#ffffff] cursor-pointer rounded-xl border-2 hover:border-orange-500 ${currentImage === prod ? "border-orange-500" : ""}`}>
-                    <img src={prod} height={0} width={0} alt='' className={`w-[100px] hidden md:flex rounded-lg transition duration-300 group-hover:opacity-30 ${currentImage === prod ? "opacity-30" : ""}`} />
+                    <img alt="productImage" src={prod} height={0} width={0}  className={`w-[100px] hidden md:flex rounded-lg transition duration-300 group-hover:opacity-30 ${currentImage === prod ? "opacity-30" : ""}`} />
                   </div>
                 ))
               }
@@ -87,12 +87,12 @@ function ProductGallery() {
                     <button onClick={() => setOpenFullView(!openFullView)}><FontAwesomeIcon icon={faRemove} className='text-2xl transition duration-200 text-white hover:text-orange-500' /></button>
                   </div>
                   <div className='flex items-center relative mb-5 w-[430px] justify-center'>
-                    <img src={fullView} className='w-[400px] rounded-xl' />
+                    <img alt="productImage" src={fullView} className='w-[400px] rounded-xl' />
                     <div className='absolute flex justify-between w-full items-center'>
-                      <button onClick={() => handleMoveImage("back")} className="bg-white transition duration-200 rounded-full w-10 h-10 flex items-center justify-center shadow-xl hover:text-orange-500">
+                      <button aria-label="previous" onClick={() => handleMoveImage("back")} className="bg-white transition duration-200 rounded-full w-10 h-10 flex items-center justify-center shadow-xl hover:text-orange-500">
                         <FontAwesomeIcon icon={faChevronLeft} className='text-lg' />
                       </button>
-                      <button onClick={() => handleMoveImage("next")} className="bg-white transition duration-200 rounded-full w-10 h-10 flex items-center justify-center shadow-xl hover:text-orange-500">
+                      <button aria-label="next" onClick={() => handleMoveImage("next")} className="bg-white transition duration-200 rounded-full w-10 h-10 flex items-center justify-center shadow-xl hover:text-orange-500">
                         <FontAwesomeIcon icon={faChevronRight} className='text-lg' />
                       </button>
                     </div>
@@ -103,7 +103,7 @@ function ProductGallery() {
                         <div
                         key={prod}
                           className={`group flex items-center justify-center transition duration-500 bg-white rounded-xl  hover:border-orange-500 ${fullView === prod ? "border-2 border-orange-500" : ""}`}>
-                          <img src={prod} height={0} width={0} alt='' className={`w-[70px] hidden md:flex rounded-xl transition duration-500 ${fullView === prod ? "opacity-30" : ""}`} />
+                          <img alt="productImage" src={prod} height={0} width={0} className={`w-[70px] hidden md:flex rounded-xl transition duration-500 ${fullView === prod ? "opacity-30" : ""}`} />
                         </div>
                       ))
                     }
