@@ -48,7 +48,7 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div id="navigation" className={openNav ? "fixed top-0 w-full h-screen backdrop-blur-xl z-10" : "z-10"}>
+      <div id="navigation" className={openNav ? "fixed top-0 w-full h-screen backdrop-blur-xl z-40" : "z-40"}>
         <div className={`duration-300 ease-in w-[60%] sm:w-[50%] md:[45%] ${openNav ? "fixed top-0 left-0 bg-white h-screen w-[200px] px-5" : "fixed top-0 left-[-100%] bg-white h-screen w-[200px] px-5"}`}>
           <div className='py-5 mb-2'>
             <button onClick={() => setOpenNav(!openNav)}><FontAwesomeIcon icon={faRemove} className='text-lg' /></button>
@@ -73,7 +73,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div className='flex items-center gap-5 mr-5 md:mr-0'>
+      <div className='flex items-center gap-5 mr-5 md:mr-0 z-0 '>
         <div
           className='relative'>
           <button aria-labelledby="cartList" onClick={() => setOpenCart(!openCart)}><FontAwesomeIcon icon={faShoppingCart} className='text-md md:text-xl' /></button>
